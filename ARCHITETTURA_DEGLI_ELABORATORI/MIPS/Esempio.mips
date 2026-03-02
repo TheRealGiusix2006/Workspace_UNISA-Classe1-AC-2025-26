@@ -1,0 +1,17 @@
+% start = 1000
+
+% ASTART = 1600
+
+	addi $9, $0, 0 		# inizializzazione indice
+
+	addi $30, $0, 0 	# inizializzazione spiazzamento
+
+	addi $31, $0, 4 	# limite del ciclo
+
+Ciclo: 	sw $9, ASTART($30) 
+
+	addi $9, $9, 1 		# incremento indice
+
+	addi $30, $30, 4 	# incremento dello spiazzamento
+
+	bne $9, $31, Ciclo 	# se non abbiamo terminato
